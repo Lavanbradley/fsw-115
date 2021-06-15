@@ -1,28 +1,21 @@
 
 var data = {
-  "name": "Darth Vader",
-  "height": "202",
-  "mass": "136",
-  "hair_color": "none",
-  "skin_color": "white",
-  "eye_color": "yellow",
-  "birth_year": "41.9BBY",
-  "gender": "male",
-  "homeworld": "http://swapi.dev/api/planets/1/",
-  "films": [
-    "http://swapi.dev/api/films/1/",
-    "http://swapi.dev/api/films/2/",
-    "http://swapi.dev/api/films/3/",
-    "http://swapi.dev/api/films/6/"
-  ],
-  "species": [],
-  "vehicles": [],
-  "starships": [
-    "http://swapi.dev/api/starships/13/"
-  ],
-  "created": "2014-12-10T15:18:20.704000Z",
-  "edited": "2014-12-20T21:17:50.313000Z",
-  "url": "http://swapi.dev/api/people/4/"
+	"name": "Yavin IV",
+	"rotation_period": "24",
+	"orbital_period": "4818",
+	"diameter": "10200",
+	"climate": "temperate, tropical",
+	"gravity": "1 standard",
+	"terrain": "jungle, rainforests",
+	"surface_water": "8",
+	"population": "1000",
+	"residents": [],
+	"films": [
+		"http://swapi.dev/api/films/1/"
+	],
+	"created": "2014-12-10T11:37:19.144000Z",
+	"edited": "2014-12-20T20:58:18.421000Z",
+	"url": "http://swapi.dev/api/planets/3/"
 };
 
 document.body.style.background = "black";
@@ -34,7 +27,7 @@ var list = document.getElementById("list");
 
 
 
-for (var i = 0; i < 1; i++ ){
+for (var i = 0; i < jsonData.length; i++ ){
   var newList = document.createElement("li");
   newList.textContent = jsonData;
   list.append(newList);
