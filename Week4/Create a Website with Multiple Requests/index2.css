@@ -1,0 +1,44 @@
+body{
+  background-color: black;
+}
+#poke{
+  height: 200px;
+  width: 200px;
+  color: red;
+  font-size: 30px;
+  background-color: black;
+}
+#bryan{
+  height: 200px;
+  width: 200px;
+  color: red;
+  font-size: 30px;
+  background-color: black;
+}
+#poke:hover{
+  background-color: white;
+}
+
+ol{
+  font-size: 20px;
+}
+h1{
+  color: red;
+  text-align: center;
+  text-decoration: underline;
+}
+
+a{
+  
+  color: red;
+  font-size: 30px;
+  background-color: black;
+ 
+}
+a:hover{
+  background-color: white;
+}
+div{
+  display: flex;
+  justify-content: center;
+}
