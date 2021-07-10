@@ -1,4 +1,7 @@
 const stuff = document.getElementById('stuff');
+var put1 = document.getElementById('put1')
+var put2 = document.getElementById('put2')
+var put3 = document.getElementById('put3')
 function getData() {
   axios.get("http://api.bryanuniversity.edu/lavanbradley/list/")
     .then(response => newData(response.data))
@@ -13,6 +16,13 @@ getData();
 function clearData() {
   while (stuff.firstChild) {
     stuff.removeChild(stuff.firstChild)
+    put1.value = ""
+    put1.style.placeholder = "Title"
+    put2.value = ""
+    put2.style.placeholder = "Price"
+    put3.value = ""
+    put3.style.placeholder = "Description"
+
   }
 }
 
@@ -51,16 +61,9 @@ function newData(data) {
 
     stuff.appendChild(x)
 
-
+    
     x.onclick = () => {
 
-      //axios.delete("http://api.bryanuniversity.edu/lavanbradley/list/" + data[i]._id)
-
-      console.log('inside the delete event')
-      console.log('id: ', id)
-
-
-      //console.log("http://api.bryanuniversity.edu/lavanbradley/list/" + id)
 
       axios.delete("http://api.bryanuniversity.edu/lavanbradley/list/" + id)
         .then(response => {
