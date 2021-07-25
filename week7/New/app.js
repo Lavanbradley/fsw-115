@@ -2,7 +2,7 @@
 
 var addName = document.getElementById('addName')
 const stuff = document.getElementById('stuff');
-var put1 = document.getElementById('put1')
+// var put1 = document.getElementById('put1')
 var put2 = document.getElementById('put2')
 var put3 = document.getElementById('put3')
 function getData() {
@@ -48,7 +48,7 @@ function newData(data) {
     chkBox.onclick = function () {
 
 
-      //axios.put("http://api.bryanuniversity.edu/lavanbradley/list/" + data[i]._id, { "completed": !data[i].isComplete })
+     
       axios.put("http://api.bryanuniversity.edu/lavanbradley/list/" + data[i]._id, { "isComplete": !completed })
         .then(response => {
           getData()
@@ -89,7 +89,6 @@ function newData(data) {
 
 
 const todoForm = document.todoForm;
-
 var post = document.getElementById('post')
 post.addEventListener('click', e => {
   e.preventDefault();
@@ -121,7 +120,7 @@ post.addEventListener('click', e => {
       price: todoForm.price.value,
       description: todoForm.description.value
     }
-    
+    // window.location.reload();
     alert("Refresh page!")
      if(addName.value === "Rick Sanchez"){
        axios.post("http://api.bryanuniversity.edu/lavanbradley/list/", newTodo2)
@@ -140,24 +139,8 @@ post.addEventListener('click', e => {
      }
      newData();
    })
+  
    .catch(err => console.log(err))
-  // console.log('inside event listener')
-
-  // const newTodo = {
-  //   name: todoForm.title.value,
-  //   price: todoForm.price.value,
-  //   description: todoForm.description.value
-  //   // user: response.data.results[0].name
-  // }
-  // axios.post("http://api.bryanuniversity.edu/lavanbradley/list/", newTodo)
-  //   .then(response => {
-  //     getData();
-  //     //newData(response.data))
-  //   })
-
-  //   .catch(err => console.log(err))
+ 
 })
-
-
-
 

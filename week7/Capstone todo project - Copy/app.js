@@ -5,6 +5,9 @@ const stuff = document.getElementById('stuff');
 var put1 = document.getElementById('put1')
 var put2 = document.getElementById('put2')
 var put3 = document.getElementById('put3')
+
+
+
 function getData() {
   axios.get("http://api.bryanuniversity.edu/lavanbradley/list/")
     .then(response => newData(response.data))
@@ -122,7 +125,7 @@ post.addEventListener('click', e => {
       description: todoForm.description.value
     }
     
-    alert("Refresh page!")
+    // alert("Refresh page!")
      if(addName.value === "Rick Sanchez"){
        axios.post("http://api.bryanuniversity.edu/lavanbradley/list/", newTodo2)
      }
@@ -138,7 +141,7 @@ post.addEventListener('click', e => {
      if(addName.value === "Jerry Smith"){
        axios.post("http://api.bryanuniversity.edu/lavanbradley/list/", newTodo6)
      }
-     newData();
+    //  newData(data);
    })
    .catch(err => console.log(err))
   // console.log('inside event listener')
@@ -156,6 +159,7 @@ post.addEventListener('click', e => {
   //   })
 
   //   .catch(err => console.log(err))
+setTimeout(function (){  window.location.reload();}, 1000)
 })
 
 
